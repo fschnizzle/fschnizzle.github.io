@@ -1,3 +1,5 @@
+/* COPIED FROM PREVIOUS WORKSHOP */
+
 .cluster{
     display: flex;
     flex-wrap: wrap;
@@ -29,20 +31,6 @@
     flex-basis: 40rem;
     flex-grow: 2;
     min-width: 50%;
-}
-
-.hero_cta{
-    margin-top: auto;
-    margin-bottom: auto;
-    padding: 3rem;
-}
-
-.hero_image{
-    padding: 1rem;
-}
-
-.hero_cta > * + *{
-    margin-top: 2rem;
 }
 
 .stack{
@@ -81,3 +69,8 @@
 .footer > .content > * + *{
     margin-top: 3rem;
 }
+
+
+/* 
+    New CSS Rules
+*/
