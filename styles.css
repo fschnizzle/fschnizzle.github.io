@@ -28,6 +28,7 @@ body{
     font-size: var(--text-base-size);
     font-family: var(--font-primary);
     color: var(--colour-primary);
+    background-color: #FCF7ED;
     /*margin-left: 2em;
     margin-right: 2em;*/
 }
@@ -94,4 +95,26 @@ body > *{
     margin-right: 2em;
 }
 
-/* COPIED FROM PREVIOUS WORKSHOP */
+/* COPIED FROM PREVIOUS WORKSHOP (ABOVE)*/
+
+header{
+    display: flex;
+    flex-direction: column;
+    /* background-color: #0D417D; */
+    background-color: powderblue;
+}
+
+#wrapper{
+    margin: 0 auto;
+}
+
+#logo-main{
+
+}
+
+
+/* COLOURS */
+
+.white{
+    color: white;
+}
