@@ -1,4 +1,41 @@
-/* COPIED FROM PREVIOUS WORKSHOP */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* COPIED FROM PREVIOUS WORKSHOP 
 
 .cluster{
     display: flex;
@@ -7,7 +44,7 @@
     align-items: center;
     flex-direction: row;
 }
-/* 
+
 .cluster--end-aligned{
     align-items: flex-end;
 }
@@ -66,9 +103,4 @@
     margin-top: 3rem;
 } */
 
-.v-shape{
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: 2%;
-    
-}
+

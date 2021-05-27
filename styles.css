@@ -1,4 +1,47 @@
-/* COPIED FROM PREVIOUS WORKSHOP */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* COPIED FROM PREVIOUS WORKSHOP
 
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
@@ -29,8 +72,8 @@ body{
     font-family: var(--font-primary);
     color: var(--colour-primary);
     background-color: #FCF7ED;
-    /*margin-left: 2em;
-    margin-right: 2em;*/
+    margin-left: 2em;
+    margin-right: 2em;
 }
 
 nav{
@@ -95,12 +138,12 @@ body > *{
     margin-right: 2em;
 }
 
-/* COPIED FROM PREVIOUS WORKSHOP (ABOVE)*/
+COPIED FROM PREVIOUS WORKSHOP (ABOVE)
 
 header{
     display: flex;
     flex-direction: column;
-    /* background-color: #0D417D; */
+    background-color: #0D417D; 
     background-color: powderblue;
 }
 
@@ -110,11 +153,7 @@ header{
 
 #logo-main{
 
-}
+} */
 
 
 /* COLOURS */
-
-.white{
-    color: white;
-}
