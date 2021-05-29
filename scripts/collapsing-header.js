@@ -3,16 +3,16 @@ $(window).scroll(function() {
         // Changes
         $('header').addClass("fixed");
         $('.fa-shopping-cart').removeClass("bubble");
-        $('.header-top-middle-container .header-search').show();
-        $('.header-top-middle-container .header-logo-main').hide();
+        // $('.header-top-middle-container .header-search').show();
+        // $('.header-top-middle-container .header-logo-main').hide();
         
     }
     else{
         // Reverse Changes
         $('header').removeClass("fixed");
         $('.fa-shopping-cart').addClass("bubble");
-        $('.header-top-middle-container .header-search').hide();
-        $('.header-top-middle-container .header-logo-main').show();
+        // $('.header-top-middle-container .header-search').hide();
+        // $('.header-top-middle-container .header-logo-main').show();
 
     }
 });
