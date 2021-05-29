@@ -38,13 +38,13 @@ body{
     outline: 0px solid red;
   }
   
-  .header-menu-icon-container{
+  .header-top-left-container{
     display: block;
     margin: 1rem auto auto auto;
     grid-column: 1;
   }
   
-  .header-menu-label-container{
+  .header-top-right-label-container{
     display: flex;
     justify-content: flex-start;
     grid-column: 2;
@@ -61,28 +61,28 @@ body{
     margin-bottom: 15px;
   }
   
-  .header-logo-main-container{
+  .header-top-middle-container{
     display: flex;
     justify-content: center;
     align-items: flex-end;
     grid-column: 3;
   }
   
-  .header-cart-label-container{
+  .header-top-right-label-container{
     display: flex;
     justify-content: flex-end;
     grid-column: 4;
     overflow: hidden;
   }
   
-  .header-cart-icon-container{
+  .header-top-right-container{
     display: block;
     margin: 1rem auto auto auto;
     align-items: block-start;
     grid-column: 5;
   }
   
-  .header-search-container{
+  .header-bottom-container{
     grid-column: 1/6; 
     display: flex;
     justify-content: center;
@@ -92,14 +92,13 @@ body{
   .header-search{
     margin: 1rem;
     font-size: 20px;
-    min-width: 60%;
     max-width: 80%;
     height: 60%;
     border-radius: 0.5rem;
   }
   
   #header-wrapper{
-    margin = 0 auto;
+    margin: 0 auto;
     background-color: #0D417D;
   }
   
@@ -115,8 +114,8 @@ body{
     background: #ff4400;
     height: 0.8rem;
     top: 1.7%;
-    transform: translate(-16px);
-    right: 1.7%;
+    /* transform: translate(-16px); */
+    right: 3.2%;
     width: 0.8rem;
     text-align: center;
     line-height: 0.85rem;
