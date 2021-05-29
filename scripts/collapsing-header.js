@@ -4,7 +4,9 @@ $(window).scroll(function() {
         $('header').addClass("fixed");
         $('.fa-shopping-cart').removeClass("bubble");
         // $('.header-top-middle-container .header-search').show();
-        // $('.header-top-middle-container .header-logo-main').hide();
+        $('.header-logo-main-container .header-logo-main').hide();
+        $('.header-logo-main-container .header-search-fixed').show();
+        $('.header-search-container .header-search').hide();
         
     }
     else{
@@ -12,7 +14,9 @@ $(window).scroll(function() {
         $('header').removeClass("fixed");
         $('.fa-shopping-cart').addClass("bubble");
         // $('.header-top-middle-container .header-search').hide();
-        // $('.header-top-middle-container .header-logo-main').show();
+        $('.header-logo-main-container .header-logo-main').show();
+        $('.header-logo-main-container .header-search-fixed').hide();
+        $('.header-search-container .header-search').show();
 
     }
 });
