@@ -31,7 +31,7 @@ body{
   }
   
   .header-bg{
-    padding: 2% 2% 4% 2%;  
+    padding: 0% 2% 2% 2%;  
   }
   
   .header-bg >*{
@@ -71,8 +71,10 @@ body{
   .header-cart-label-container{
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     grid-column: 4;
-    overflow: hidden;
+    overflow: visible;
+    transform: translateY(4px);
   }
   
   .header-cart-icon-container{
@@ -104,7 +106,7 @@ body{
     max-width: 80%;
     height: 60%;
     border-radius: 0.5rem;
-    margin: 4% 0% 2% 0%; 
+    margin: 1rem 20% 0.1rem 0%; 
   }
   
   #header-wrapper{
@@ -152,8 +154,8 @@ body{
   
   /* Fonts */
   
-  .sidebar-heading{
+  .running-total{
     font-family: Arial;
-    font-size: 28px;
+    font-size: 20px;
   }
   

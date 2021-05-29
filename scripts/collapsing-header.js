@@ -7,6 +7,7 @@ $(window).scroll(function() {
         $('.header-logo-main-container .header-logo-main').hide();
         $('.header-logo-main-container .header-search-fixed').show();
         $('.header-search-container .header-search').hide();
+        $('.header-cart-label-container .running-total').show();
         
     }
     else{
@@ -17,6 +18,7 @@ $(window).scroll(function() {
         $('.header-logo-main-container .header-logo-main').show();
         $('.header-logo-main-container .header-search-fixed').hide();
         $('.header-search-container .header-search').show();
+        $('.header-cart-label-container .running-total').hide();
 
     }
 });
