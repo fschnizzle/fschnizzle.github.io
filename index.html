@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="layout.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="scripts/collapsing-header.js"></script>
 </head>
 <body>
     <!-- START -->
@@ -38,8 +40,27 @@
         </header>
     </article> -->
 
+    <article id="header-wrapper">
+        <header class="header-bg">
+          <div class='header-menu-icon-container'><i class="fa fa-bars fa-2x white icon"></i></div>
+          
+          <div class='header-menu-label-container'><p class="sidebar-heading white"></p></div>
+          
+          <div class='header-logo-main-container'><img class="header-logo-main"alt="Qries" src="https://www.linkpicture.com/q/LogoMain.png"></div>
+          
+          <div class='header-cart-label-container'><p class="sidebar-heading white"></p></div> 
+          
+          <div class='header-cart-icon-container'><i class="fa fa-shopping-cart fa-2x white icon bubble" data-count= 0 ></i></div> 
+          
+          <div class="header-search-container">
+            <input class="header-search" type="text" placeholder="Search..">
+          </div>
+        </header>
+      </article>
+      
+      <!-- White Space Below -->
+      <body></body
 
-    
     <!-- END -->
 </body>
 </html>
