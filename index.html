@@ -17,18 +17,18 @@
 
     <article id="header-wrapper">
         <header class="header-bg">
-          <div class='header-menu-icon-container'><i class="fa fa-bars fa-2x white icon"></i></div>
+          <div class='header-menu-icon-container' onclick="openNav(); closeCart()"><i class="fa fa-bars fa-2x white icon"></i></div>
           
           <div class='header-menu-label-container'><p class="sidebar-heading white"></p></div>
           
           <div class='header-logo-main-container'>
                 <img class="header-logo-main"alt="Qries" src="https://www.linkpicture.com/q/LogoMain.png">
-                <input class="header-search-fixed" type="text" placeholder="Search..">
+                <input hidden class="header-search-fixed" type="text" placeholder="Search fixed..">
             </div>
           
-          <div class='header-cart-label-container'><p class="running-total white">$00.00</p></div> 
+          <div class='header-cart-label-container'><p hidden class="running-total white">$00.00</p></div> 
           
-          <div class='header-cart-icon-container'><i class="fa fa-shopping-cart fa-2x white icon bubble" data-count= 0 ></i></div> 
+          <div class='header-cart-icon-container' onclick="openCart(); closeNav()"><i class="fa fa-shopping-cart fa-2x white icon bubble" data-count= 0 ></i></div> 
           
           <div class="header-search-container">
             <input class="header-search" type="text" placeholder="Search..">
@@ -36,6 +36,25 @@
         </header>
       </article>
       
+      <!-- Sidebar Menu -->
+      <div id="sidebar-menu" class="sidenav left-side">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <!-- Sidebar Shopping Cart -->
+      <div id="sidebar-shopping-cart" class="sidenav right-side">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeCart()">&times;</a>
+        <a href="#">Item1</a>
+        <a href="#">Item 2</a>
+        <a href="#">Item 3</a>
+        <a href="#">Subtotal</a>
+      </div>
+      
+
       <!-- White Space Below -->
       <body></body
 

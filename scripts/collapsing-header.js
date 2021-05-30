@@ -26,3 +26,22 @@ $(window).scroll(function() {
 
 
 // Remove logo main, replace with search bar
+
+
+// Sidebar JS
+
+function openNav() {
+    document.getElementById("sidebar-menu").style.width = "250px";
+  }
+  
+function closeNav() {
+    document.getElementById("sidebar-menu").style.width = "0";
+}
+
+function openCart() {
+    document.getElementById("sidebar-shopping-cart").style.width = "350px";
+  }
+  
+function closeCart() {
+    document.getElementById("sidebar-shopping-cart").style.width = "0";
+}
