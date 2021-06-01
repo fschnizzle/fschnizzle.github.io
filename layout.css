@@ -200,9 +200,9 @@ body{
     position: fixed;
     z-index: 1;
     top: 0;
-    background-color: #FCF7ED;
+    /* background-color: #FCF7ED; */
     overflow-x: hidden;
-    transition: 0.5s;
+    
     padding-top: 0px;
   }
   
@@ -234,9 +234,12 @@ body{
 
   .sidebar-body{
       padding-top: 4rem;
+      background-color: #FCF7ED;
+      height: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
+      
       /* background-color: greenyellow; */
   }
 
@@ -247,9 +250,10 @@ body{
   .cart-sidebar-body{
     padding-top: 4rem;
     display: flex;
+    background-color: #FCF7ED;
+    height: 100%;
     flex-direction: column;
     align-items: center;
-    /* background-color: greenyellow; */
     }
 
     .cart-sidebar-body > *{
@@ -271,3 +275,46 @@ body{
   .right-side{
       right: 0;
   }
+
+  #sidebar-menu{
+      display: grid;
+      width: 0%;
+      height: 100%;
+      grid-template-columns: minmax(250px,250px) minmax(100px,100%);
+      grid-template-rows: 100%;
+
+  }
+
+  #sidebar-shopping-cart{
+    display: grid;
+    width: 0%;
+    height: 100%;
+    grid-template-columns: minmax(0px,100%) 350px  ;
+    grid-template-rows: 100%;
+
+}
+
+  .sidebar-show{
+      grid-column: 1;
+  }
+
+
+  .sidebar-dim{
+    /* position:absolute; */
+    background-color: black; 
+    opacity: 50%;
+    grid-column: 2;
+    z-index: 20001;
+}
+
+.cart-sidebar-dim{
+  /* position:absolute; */
+  background-color: black; 
+  opacity: 50%;
+  grid-column: 1;
+  z-index: 20000;
+}
+
+.cart-sidebar-show{
+    grid-column: 2;
+}

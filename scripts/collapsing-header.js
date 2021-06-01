@@ -37,7 +37,8 @@ $(window).scroll(function() {
 // Sidebar JS
 
 function openNav() {
-    document.getElementById("sidebar-menu").style.width = "250px";
+    document.getElementById("sidebar-menu").style.width = "100%" ; 
+    // 250px
   }
   
 function closeNav() {
@@ -45,7 +46,7 @@ function closeNav() {
 }
 
 function openCart() {
-    document.getElementById("sidebar-shopping-cart").style.width = "350px";
+    document.getElementById("sidebar-shopping-cart").style.width = "100%";
   }
   
 function closeCart() {

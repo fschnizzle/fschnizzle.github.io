@@ -13,36 +13,40 @@
     <script type="text/javascript" src="scripts/collapsing-header.js"></script>
 </head>
 <body>
-
-
-    <article id="header-wrapper">
-        <header class="header-bg">
-          <div class='header-menu-icon-container' onclick="openNav(); closeCart()">
-            <i class="fa fa-bars fa-2x white icon"></i>
-            <img hidden src="img/LogoIconSVG.svg" class="header-menu-logo-icon sidebar-icon filter-white" alt="">
-            <!-- <img hidden class="header-menu-logo-icon sidebar-icon" src="img/LogoIcon.png" alt=""> -->
-  
-        </div>
-          
-          <div class='header-menu-label-container'><p class="sidebar-heading white"></p></div>
-          
-          <div class='header-logo-main-container'>
-                <img class="header-logo-main"alt="Qries" src="https://www.linkpicture.com/q/LogoMain.png">
-                <input hidden class="header-search-fixed" type="text" placeholder="Search fixed..">
-            </div>
-          
-          <div class='header-cart-label-container'><p hidden class="running-total white">$00.00</p></div> 
-          
-          <div class='header-cart-icon-container' onclick="openCart(); closeNav()"><i class="fa fa-shopping-cart fa-2x white icon bubble" data-count= 0 ></i></div> 
-          
-          <div class="header-search-container">
-            <input class="header-search" type="text" placeholder="Search..">
-          </div>
-        </header>
-      </article>
+    <div class="Main-Body">
+        <article id="header-wrapper">
+            <header class="header-bg">
+              <div class='header-menu-icon-container' onclick="openNav(); closeCart()">
+                <i class="fa fa-bars fa-2x white icon"></i>
+                <img hidden src="img/LogoIconSVG.svg" class="header-menu-logo-icon sidebar-icon filter-white" alt="">
+                <!-- <img hidden class="header-menu-logo-icon sidebar-icon" src="img/LogoIcon.png" alt=""> -->
       
-      <!-- Sidebar Menu -->
-      <div id="sidebar-menu" class="sidenav left-side">
+            </div>
+              
+              <div class='header-menu-label-container'><p class="sidebar-heading white"></p></div>
+              
+              <div class='header-logo-main-container'>
+                    <img class="header-logo-main"alt="Qries" src="https://www.linkpicture.com/q/LogoMain.png">
+                    <input hidden class="header-search-fixed" type="text" placeholder="Search fixed..">
+                </div>
+              
+              <div class='header-cart-label-container'><p hidden class="running-total white">$00.00</p></div> 
+              
+              <div class='header-cart-icon-container' onclick="openCart(); closeNav()"><i class="fa fa-shopping-cart fa-2x white icon bubble" data-count= 0 ></i></div> 
+              
+              <div class="header-search-container">
+                <input class="header-search" type="text" placeholder="Search..">
+              </div>
+            </header>
+          </article>
+    </div>
+
+
+
+    
+    <!-- Sidebar Menu -->
+    <section id="sidebar-menu" class="sidenav left-side">
+        <div class="sidebar-show">
         <div class="sidebar-header">
             <img src="img/LogoIconSVG.svg" class="sidebar-icon filter-white" alt="" onclick="closeNav()">
             <p id="cart-heading">Menu</p>
@@ -53,27 +57,35 @@
             <a href="#">Clients</a>
             <a href="#">Contact</a>
         </div>
-      </div>
+        </div>
+        <div class="sidebar-dim" onclick="closeNav()"></div>
 
-      <!-- Sidebar Shopping Cart -->
-      <div id="sidebar-shopping-cart" class="sidenav right-side">
-        <div class="sidebar-header">
-            <p id="cart-heading">Shopping Cart</p>
-            <a href="javascript:void(0)" class="closebtn" onclick="closeCart()">&times;</a>
+    
+    </section>
+
+    <!-- Sidebar Shopping Cart -->
+    <section id="sidebar-shopping-cart" class="sidenav right-side">
+        <div class="cart-sidebar-dim" onclick="closeCart()"></div>
+        <div class="cart-sidebar-show">
+            <div class="sidebar-header">
+                <p id="cart-heading">Shopping Cart</p>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeCart()">&times;</a>
+            </div>
+
+            <div class="cart-sidebar-body">
+                <a href="#">Item1</a>
+                <a href="#">Item 2</a>
+                <a href="#">Item 3</a>
+                <a href="#">Subtotal</a>
+            </div>
         </div>
-        
-        <div class="cart-sidebar-body">
-            <a href="#">Item1</a>
-            <a href="#">Item 2</a>
-            <a href="#">Item 3</a>
-            <a href="#">Subtotal</a>
-        </div>
-        
-      </div>
+
+    
+    </section>
       
 
       <!-- White Space Below -->
-      <body></body
+      
 
     
     <!-- END -->
