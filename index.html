@@ -17,7 +17,12 @@
 
     <article id="header-wrapper">
         <header class="header-bg">
-          <div class='header-menu-icon-container' onclick="openNav(); closeCart()"><i class="fa fa-bars fa-2x white icon"></i></div>
+          <div class='header-menu-icon-container' onclick="openNav(); closeCart()">
+            <i class="fa fa-bars fa-2x white icon"></i>
+            <img hidden src="img/LogoIconSVG.svg" class="header-menu-logo-icon sidebar-icon filter-white" alt="">
+            <!-- <img hidden class="header-menu-logo-icon sidebar-icon" src="img/LogoIcon.png" alt=""> -->
+  
+        </div>
           
           <div class='header-menu-label-container'><p class="sidebar-heading white"></p></div>
           
@@ -38,20 +43,32 @@
       
       <!-- Sidebar Menu -->
       <div id="sidebar-menu" class="sidenav left-side">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
+        <div class="sidebar-header">
+            <img src="img/LogoIconSVG.svg" class="sidebar-icon filter-white" alt="" onclick="closeNav()">
+            <p id="cart-heading">Menu</p>
+        </div>
+        <div class="sidebar-body">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
       </div>
 
       <!-- Sidebar Shopping Cart -->
       <div id="sidebar-shopping-cart" class="sidenav right-side">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeCart()">&times;</a>
-        <a href="#">Item1</a>
-        <a href="#">Item 2</a>
-        <a href="#">Item 3</a>
-        <a href="#">Subtotal</a>
+        <div class="sidebar-header">
+            <p id="cart-heading">Shopping Cart</p>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeCart()">&times;</a>
+        </div>
+        
+        <div class="cart-sidebar-body">
+            <a href="#">Item1</a>
+            <a href="#">Item 2</a>
+            <a href="#">Item 3</a>
+            <a href="#">Subtotal</a>
+        </div>
+        
       </div>
       
 

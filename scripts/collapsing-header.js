@@ -8,6 +8,10 @@ $(window).scroll(function() {
         $('.header-logo-main-container .header-search-fixed').show();
         $('.header-search-container .header-search').hide();
         $('.header-cart-label-container .running-total').show();
+        $('.header-menu-logo-icon').show();
+        $('.fa-bars').hide();
+ 
+        
         
     }
     else{
@@ -19,6 +23,8 @@ $(window).scroll(function() {
         $('.header-logo-main-container .header-search-fixed').hide();
         $('.header-search-container .header-search').show();
         $('.header-cart-label-container .running-total').hide();
+        $('.header-menu-logo-icon').hide();
+        $('.fa-bars').show();
 
     }
 });
