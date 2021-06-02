@@ -59,3 +59,10 @@ function openCart() {
 function closeCart() {
     document.getElementById("sidebar-shopping-cart").style.width = "0";
 }
+
+
+// Categories JS
+// If "categories-container-id".width < 1080px
+// if (document.getElementById("categories-container-id").getBoundingClientRect().width < 1080){
+//     console.log("YEAHHEYHDHDJDJ");
+// }

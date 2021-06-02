@@ -3,6 +3,8 @@ body{
     background-color: #FCF7ED;
   }
 
+
+
   
   
   header{
@@ -182,15 +184,7 @@ body{
   
   
   /* Layout */
-    .content{
-        margin-left: min(12%, 150px);
-        margin-right: min(12%, 150px);
-        padding-top: 50px; 
-    }
-
-    .header-fixed{
-        padding-top: 120px; 
-    }
+    
 
   
   /* Fonts */
@@ -349,26 +343,57 @@ body{
 .category-icons-container{
     /* background-color: lavender; */
 
-    gap: 4px;
+    gap: 12px;
 }
 
-.category-icon-container > *{
-    
-    
-
+.category-icon-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .category-icon{
-    width: 240px;
-    height: 144px;
+    width: 245px;
+    height: 147px;
     border: 0px solid red;
     border-radius: 15px;
 }
 
 .category-icon:hover{
+    outline: 3px solid #005EC9;
+    outline-offset: -3px;
+    border-radius: 0px; 
+}
+
+.currently-selected{
     outline: 3px solid #0D417D;
     outline-offset: -3px;
-    border-radius: 0px;
-    
-    
+    border-radius: 0px; 
 }
+
+.content{
+    margin-left: min(12%, 150px);
+    margin-right: min(12%, 150px);
+    padding-top: 50px; 
+
+}
+
+.header-fixed{
+    padding-top: 120px; 
+}
+
+.home-page{
+    display: flex; 
+    justify-content: center;
+}
+
+
+/* 
+Example of CSS that only activates at a certain page width
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  } */
