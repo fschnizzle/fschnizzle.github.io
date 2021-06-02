@@ -10,6 +10,10 @@ $(window).scroll(function() {
         $('.header-cart-label-container .running-total').show();
         $('.header-menu-logo-icon').show();
         $('.fa-bars').hide();
+
+        // Content changes
+        $('.content').addClass("header-fixed");
+
  
         
         
@@ -25,6 +29,9 @@ $(window).scroll(function() {
         $('.header-cart-label-container .running-total').hide();
         $('.header-menu-logo-icon').hide();
         $('.fa-bars').show();
+
+        // Content changes
+        $('.content').removeClass("header-fixed");
 
     }
 });

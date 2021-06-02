@@ -1,6 +1,9 @@
 body{
     height: 1500px;
+    background-color: #FCF7ED;
   }
+
+  
   
   header{
     margin: 0 auto;
@@ -28,6 +31,7 @@ body{
     grid-template-rows: 100%;
     background: #0D417D;
     text-align: left;
+    
   }
   
   .header-bg{
@@ -178,7 +182,15 @@ body{
   
   
   /* Layout */
-  
+    .content{
+        margin-left: min(12%, 150px);
+        margin-right: min(12%, 150px);
+        padding-top: 50px; 
+    }
+
+    .header-fixed{
+        padding-top: 120px; 
+    }
 
   
   /* Fonts */
