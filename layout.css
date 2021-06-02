@@ -330,3 +330,45 @@ body{
 .cart-sidebar-show{
     grid-column: 2;
 }
+
+
+
+/* Main Page Content */
+
+.cluster{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.cluster > *{
+    margin: 0.5rem;
+}
+.category-icons-container{
+    /* background-color: lavender; */
+
+    gap: 4px;
+}
+
+.category-icon-container > *{
+    
+    
+
+}
+
+.category-icon{
+    width: 240px;
+    height: 144px;
+    border: 0px solid red;
+    border-radius: 15px;
+}
+
+.category-icon:hover{
+    outline: 3px solid #0D417D;
+    outline-offset: -3px;
+    border-radius: 0px;
+    
+    
+}
