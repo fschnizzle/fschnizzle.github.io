@@ -410,10 +410,9 @@ body{
 
 
 
-
 /* Example of CSS that only activates at a certain page width */
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1380px) {
     body {
       /* For testing purposes only DELETE WHEN FINISHED */
       /* background-color: lightblue; */
@@ -423,12 +422,13 @@ body{
     }
 
     .category-form-container{
-      visibility: initial;
+      visibility: visible;
+    }
 
     .category-icon{
-      width: minmax(60%, 245px);
-      height: auto;
-  }
+      /* width: minmax(60%, 245px);
+      height: auto; */
+    }
 
   }
 
@@ -436,5 +436,10 @@ body{
     .header-cart-label-container{
       visibility: hidden;
     }
+  }
 
+  @media only screen and (min-width: 1380px) {
+    .independent-artists{
+      visibility: visible;
+    }
   }

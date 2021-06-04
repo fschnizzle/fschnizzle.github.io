@@ -61,6 +61,95 @@ function closeCart() {
 }
 
 
+// Change Genre JS
+
+function getSelectedGenre() {
+    var selectedGenre = document.getElementById("genre-selection").value;
+    console.log(selectedGenre);
+
+    if (selectedGenre == "independent-artists"){
+        // Hide all other genres
+        $('.pop-music').hide();
+        $('.classic-artists').hide();
+        $('.dj-and-electronica').hide();
+
+        // Remove current selection
+        $('.independent-artists-img').removeClass("currently-selected");
+        $('.classic-artists-img').removeClass("currently-selected");
+        $('.dj-and-electronica-img').removeClass("currently-selected");
+        $('.pop-music-img').removeClass("currently-selected");
+
+
+        // Show selected Genre and change current selection
+        $('.independent-artists').show();
+        $('.independent-artists-img').addClass("currently-selected");
+        
+    }
+
+    else if (selectedGenre == "classic-artists"){
+        // Hide all other genres
+        $('.independent-artists').hide();
+        $('.dj-and-electronica').hide();
+        $('.pop-music').hide();
+
+        // Remove current selection
+        $('.independent-artists-img').removeClass("currently-selected");
+        $('.classic-artists-img').removeClass("currently-selected");
+        $('.dj-and-electronica-img').removeClass("currently-selected");
+        $('.pop-music-img').removeClass("currently-selected");
+
+        // Show selected Genre
+        $('.classic-artists').show();
+        $('.classic-artists-img').addClass("currently-selected");
+    }
+
+    else if (selectedGenre == "dj-and-electronica"){
+        // Hide all other genres
+        $('.independent-artists').hide();
+        $('.classic-artists').hide();
+        $('.pop-music').hide();
+
+        // Remove current selection
+        $('.independent-artists-img').removeClass("currently-selected");
+        $('.classic-artists-img').removeClass("currently-selected");
+        $('.dj-and-electronica-img').removeClass("currently-selected");
+        $('.pop-music-img').removeClass("currently-selected");
+
+        // Show selected Genre
+        $('.dj-and-electronica').show();
+        $('.dj-and-electronica-img').addClass("currently-selected");
+    }
+
+    else if (selectedGenre == "pop-music"){
+        // Hide all other genres
+        $('.independent-artists').hide();
+        $('.classic-artists').hide();
+        $('.dj-and-electronica').hide();
+
+        // Remove current selection
+        $('.independent-artists-img').removeClass("currently-selected");
+        $('.classic-artists-img').removeClass("currently-selected");
+        $('.dj-and-electronica-img').removeClass("currently-selected");
+        $('.pop-music-img').removeClass("currently-selected");
+
+        // Show selected Genre
+        $('.pop-music').show();
+        $('.pop-music-img').addClass("currently-selected");
+    }
+}
+
+// var showElementsWhenWidth = function(){
+//     if ( $(window).width() < 1379 ) {
+//         $('.independent-artists').show();
+//         $('.classic-artists').show();
+//         $('.dj-and-electronica').show();
+//         $('.pop-music').show();
+//     }
+// }
+
+
+
+
 // Categories JS
 // If "categories-container-id".width < 1080px
 // if (document.getElementById("categories-container-id").getBoundingClientRect().width < 1080){

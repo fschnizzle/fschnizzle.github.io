@@ -44,41 +44,40 @@
 
           <div class="home-page content">
             <div id="categories-container-id" class="category-icons-container cluster">
-                <div class="category-icon-container">
-                    <img class="category-icon currently-selected" src="img/Category Icons/Independent Artists.png" alt="">
+                <div class="independent-artists category-icon-container">
+                    <img class="independent-artists-img category-icon currently-selected" src="img/Category Icons/Independent Artists.png" alt="">
                     <p class="category-label">Independent Artists</p>
                 </div>
-                <div class="category-icon-container">
-                    <img class="category-icon" src="img/Category Icons/Classic Artists.png" alt="">
+                <div class="classic-artists category-icon-container">
+                    <img class="classic-artists-img category-icon" src="img/Category Icons/Classic Artists.png" alt="">
                     <p class="category-label">Classic Artists</p>
                 </div>
-                <div class="category-icon-container">
-                    <img class="category-icon" src="img/Category Icons/DJ music.png" alt="">
+                <div class="dj-and-electronica category-icon-container">
+                    <img class="dj-and-electronica-img category-icon" src="img/Category Icons/DJ music.png" alt="">
                     <p class="category-label">DJ and Electronica</p>
                 </div>
-                <div class="category-icon-container">
-                    <img class="category-icon" src="img/Category Icons/Pop music.png" alt="">
+                <div class="pop-music category-icon-container">
+                    <img class="pop-music-img category-icon" src="img/Category Icons/Pop music.png" alt="">
                     <p class="category-label">Pop Music</p>
                 </div>
                 
                 
             </div>
             <div class="category-form-container">
-                <form>
-                    <label for="cars">Category:</label>
-                    <select name="cars" id="cars">
-                    <optgroup label="Swedish Cars">
-                        <option value="volvo">Independent Artists</option>
-                        <option value="saab">Saab</option>
-                    </optgroup>
-                    <optgroup label="German Cars">
-                        <option value="mercedes">Mercedes</option>
-                        <option value="audi">Audi</option>
-                    </optgroup>
-                    </select>
-                    <input type="submit" value="Submit">
-                </form>
+                
+                <label form="Genre">Change genre:</label>
+                <select id="genre-selection">
+                    <option value="independent-artists">Independent Artists</option>
+                    <option value="classic-artists">Classic Artists</option>
+                    <option value="dj-and-electronica">DJ and Electronica</option>
+                    <option value="pop-music">Pop Music</option>
+                </select>
+                <input type="submit" value="Submit" onclick="getSelectedGenre()">
+                
             </div>
+
+            <!-- Catalogue Grid -->
+            <!-- https://codepen.io/fschnizzle/pen/LYWdzKM -->
 
      
           </div>
