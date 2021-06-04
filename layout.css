@@ -1,6 +1,7 @@
 body{
     height: 1500px;
     background-color: #FCF7ED;
+    display: block;
   }
 
 
@@ -158,6 +159,8 @@ body{
     font-family: sans-serif;
     font-weight: bold;
   }
+
+  
   
   /* Colours */
   
@@ -286,7 +289,7 @@ body{
       display: grid;
       width: 0%;
       height: 100%;
-      grid-template-columns: minmax(250px,250px) minmax(100px,100%);
+      grid-template-columns: minmax(150px,250px) minmax(100px,100%);
       grid-template-rows: 100%;
 
   }
@@ -295,7 +298,7 @@ body{
     display: grid;
     width: 0%;
     height: 100%;
-    grid-template-columns: minmax(0px,100%) 350px  ;
+    grid-template-columns: minmax(0px,100%) minmax(150px, 350px)  ;
     grid-template-rows: 100%;
 
 }
@@ -342,6 +345,9 @@ body{
 }
 .category-icons-container{
     /* background-color: lavender; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
     gap: 12px;
 }
@@ -352,6 +358,7 @@ body{
     align-items: center;
     gap: 10px;
 }
+
 
 .category-icon{
     width: 245px;
@@ -385,15 +392,49 @@ body{
 
 .home-page{
     display: flex; 
+    flex-direction: column;
     justify-content: center;
 }
 
+.Main-Body{
+  display: block;
+}
 
-/* 
-Example of CSS that only activates at a certain page width
+.category-form-container{
+    visibility: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
 
-@media only screen and (max-width: 600px) {
+
+
+
+/* Example of CSS that only activates at a certain page width */
+
+@media only screen and (max-width: 1100px) {
     body {
-      background-color: lightblue;
+      /* For testing purposes only DELETE WHEN FINISHED */
+      /* background-color: lightblue; */
     }
-  } */
+    #categories-container-id div:not(:first-child) {
+      display: none;
+    }
+
+    .category-form-container{
+      visibility: initial;
+
+    .category-icon{
+      width: minmax(60%, 245px);
+      height: auto;
+  }
+
+  }
+
+  @media only screen and (max-width: 450px) {
+    .header-cart-label-container{
+      visibility: hidden;
+    }
+
+  }
