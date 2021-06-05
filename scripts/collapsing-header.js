@@ -140,16 +140,26 @@ function getSelectedGenre() {
 
 // Change Genre (small screen) JS
 
-// function changeGenre() {
-//     // Remove current selection
-//     $('.independent-artists-img').removeClass("currently-selected");
-//     $('.classic-artists-img').removeClass("currently-selected");
-//     $('.dj-and-electronica-img').removeClass("currently-selected");
-//     $('.pop-music-img').removeClass("currently-selected");
+function changeGenre(clicked_id) {
+    // Remove current selection
+    $('#independent-artists-img').removeClass("currently-selected");
+    $('#classic-artists-img').removeClass("currently-selected");
+    $('#dj-and-electronica-img').removeClass("currently-selected");
+    $('#pop-music-img').removeClass("currently-selected");
 
-//     if (selectedGenre == "independent-artists")
+    // Add Currently selected class to clicked img id
+    var x = document.getElementById(clicked_id).id;
+    var hash = "#";
+    var id_string = hash.concat(String(x));
+    $(id_string).addClass("currently-selected");
+
+    // Change Catalogue page to match genre
+
+        // Add code HERE
+
     
-// }
+    
+}
 
 
 
