@@ -162,7 +162,17 @@ function changeGenre(clicked_id) {
 }
 
 
+function openPopup(img) {
+    document.getElementById("pop-up-window").style.width = "100%";
+    var name = img.src;
+    document.getElementById('popup-img').src=name
+    console.log("happened")
+  }
 
+function closePopup() {
+    document.getElementById("pop-up-window").style.width = "0%";
+    console.log("happened 2");
+}
 
 
 
