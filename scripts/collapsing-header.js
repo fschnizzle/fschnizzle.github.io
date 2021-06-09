@@ -165,13 +165,22 @@ function changeGenre(clicked_id) {
 function openPopup(img) {
     document.getElementById("pop-up-window").style.width = "100%";
     var name = img.src;
-    document.getElementById('popup-img').src=name
-    console.log("happened")
+    document.getElementById('popup-img').src=name;
+    console.log(img);
+    // console.log(document.getElementById('popup-img').nextSibling);
+    var sibling_node = img.nextSibling.nextSibling
+    var title_node = sibling_node.firstChild.nextSibling 
+    var artist_node = sibling_node.firstChild.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling
+    console.log(title_node.innerHTML)
+    console.log(artist_node.innerHTML)
+    document.getElementById('popup-artist').innerHTML = artist_node.innerHTML;
+    document.getElementById('popup-title').innerHTML = title_node.innerHTML;
+
   }
 
 function closePopup() {
     document.getElementById("pop-up-window").style.width = "0%";
-    console.log("happened 2");
+    console.log("closed");
 }
 
 

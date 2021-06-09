@@ -610,6 +610,11 @@ body{
     overflow: hidden;
   }
   
+  .title-cell p{
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  
   .price-cell {
     grid-column: 2;
     grid-row: 3;
@@ -697,7 +702,7 @@ body{
 
     .item-description-grid {
       display: grid;
-      grid-template-columns: 65px 55px;
+      grid-template-columns: 80px 25px;
       grid-template-rows: 30px 30px 30px;
     }
 
