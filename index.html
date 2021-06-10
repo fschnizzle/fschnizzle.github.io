@@ -29,7 +29,7 @@
               <div class='header-logo-main-container'>
                     <!-- <img class="header-logo-main"alt="Qries" src="https://www.linkpicture.com/q/LogoMain.png"> -->
                     <img class="header-logo-main"alt="Header Logo" src="img/LogoMain.png">
-                    <input hidden class="header-search-fixed" type="text" placeholder="Search fixed..">
+                    <input hidden class="header-search-fixed" type="text" placeholder="Search fixed.." onclick="underMaintenance()">
                 </div>
               
               <div class='header-cart-label-container'><p hidden id="running-total" class="running-total white">$00.00</p></div> 
@@ -37,12 +37,12 @@
               <div class='header-cart-icon-container' onclick="openCart(); closeNav(); cart_display()"><i class="fa fa-shopping-cart fa-2x white icon bubble" data-count= 0 ></i></div> 
               
               <div class="header-search-container">
-                <input class="header-search" type="text" placeholder="Search..">
+                <input class="header-search" type="text" placeholder="Search.." onclick="underMaintenance()">
               </div>
             </header>
           </article>
 
-          <div class="home-page content">
+          <div id="home-page-content" class="home-page content">
             <div id="categories-container-id" class="category-icons-container cluster">
                 <div class="independent-artists category-icon-container">
                     <img id="independent-artists-img" class="category-icon currently-selected" src="img/Category Icons/Independent Artists.png" alt="independent-artists" onclick="changeGenre(this.id)">
@@ -117,7 +117,7 @@
                         <div class="grid-item-content">
                             <img id="album-cover" src="img/Album Art/3.jpeg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
-                                <div class="title-cell">Inna Jungle</div>
+                                <div class="title-cell">In Jungle</div>
                                 <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">Lee Perry</div>
                                 <div class="price-cell">$29.99</div>
@@ -209,7 +209,7 @@
                         <div class="grid-item-content">
                             <img id="album-cover" src="img/Album Art/12.jpeg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
-                                <div class="title-cell">Monster Planet</div>
+                                <div class="title-cell">Monster P</div>
                                 <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">Steve Braund</div>
                                 <div class="price-cell">$29.99</div>
@@ -782,10 +782,9 @@
             <p id="cart-heading">Menu</p>
         </div>
         <div class="sidebar-body">
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
+            <a href="#" onclick="underMaintenance()">About</a>
+            <a href="#" onclick="underMaintenance()">Services</a>
+            <a href="#" onclick="underMaintenance()">Contact</a>
         </div>
         </div>
         <div class="sidebar-dim" onclick="closeNav()"></div>
@@ -802,11 +801,14 @@
                 <a href="javascript:void(0)" class="closebtn" onclick="closeCart()">&times;</a>
             </div>
             <div class="cart-sidebar-body">
-                <div id="cart-sidebar-constant-container">
-                    <a>Constant</a>
-                </div>
+                
                 <div id="cart-sidebar-body-container">
     
+                </div>
+                <p id="empty-cart" style="transform: translateY(-30px);">Shopping cart is empty</p>
+                <div id="cart-sidebar-constant-container">
+                    <pre id="subtotal">Subtotal:</pre>
+                    <button id="btn" onclick="goToCheckout(); closeCart()">Checkout</button>
                 </div>
             </div>
             

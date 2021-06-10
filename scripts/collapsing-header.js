@@ -267,9 +267,24 @@ function cart_display(){
     // Clear Div
     document.getElementById('cart-sidebar-body-container').innerHTML = "";
 
+    // Add Line break
+    var line_break = document.createElement("br")
+    var solid_line = document.createElement("hr")
+    document.getElementById('cart-sidebar-body-container').appendChild(solid_line)
+
+    if (cart_items.length < 1){
+        $('#cart-sidebar-body-container').hide() 
+        $('#cart-sidebar-constant-container').hide() 
+        $('#empty-cart').show() 
+      }
+
+    else {
+        $('#cart-sidebar-body-container').show() 
+        $('#cart-sidebar-constant-container').show()
+        $('#empty-cart').hide() 
+    }
 
     for (var item=0; item < cart_items.length; item++){
-    
 
         // Create new div for each item
         var cart_item_div = document.createElement("div")
@@ -289,14 +304,18 @@ function cart_display(){
 
         // Add Price Label
         var price_label = document.createElement("p")
-        price_label.innerHTML = "($29.99)"
+        price_label.innerHTML = "$29.99"
         current_div.appendChild(price_label)
 
         // Add remove icon
         var remove_icon = document.createElement("i")
         remove_icon.className = 'fa fa-minus-circle 2x' 
         current_div.appendChild(remove_icon)
-        
+
+        // Add Line break
+        var line_break = document.createElement("br")
+        var solid_line = document.createElement("hr")
+        document.getElementById('cart-sidebar-body-container').appendChild(solid_line)
     }
 
 
@@ -305,7 +324,14 @@ function cart_display(){
     // document.body.appendChild(btn);   
 }
 
+function underMaintenance(){
+    alert("Feature is currently under maintenance")
+}
 
+function goToCheckout(){
+    $('#home-page-content').hide()
+    console.log("agagah")
+}
 
 
 
