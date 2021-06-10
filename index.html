@@ -17,7 +17,7 @@
     <div class="Main-Body">
         <article id="header-wrapper">
             <header class="header-bg">
-              <div class='header-menu-icon-container' onclick="openNav(); closeCart()">
+              <div class='header-menu-icon-container' onclick="openNav(); closeCart();">
                 <i class="fa fa-bars fa-2x white icon"></i>
                 <img hidden src="img/LogoIconSVG.svg" class="header-menu-logo-icon sidebar-icon filter-white" alt="">
                 <!-- <img hidden class="header-menu-logo-icon sidebar-icon" src="img/LogoIcon.png" alt=""> -->
@@ -32,9 +32,9 @@
                     <input hidden class="header-search-fixed" type="text" placeholder="Search fixed..">
                 </div>
               
-              <div class='header-cart-label-container'><p hidden class="running-total white">$00.00</p></div> 
+              <div class='header-cart-label-container'><p hidden id="running-total" class="running-total white">$00.00</p></div> 
               
-              <div class='header-cart-icon-container' onclick="openCart(); closeNav()"><i class="fa fa-shopping-cart fa-2x white icon bubble" data-count= 0 ></i></div> 
+              <div class='header-cart-icon-container' onclick="openCart(); closeNav(); cart_display()"><i class="fa fa-shopping-cart fa-2x white icon bubble" data-count= 0 ></i></div> 
               
               <div class="header-search-container">
                 <input class="header-search" type="text" placeholder="Search..">
@@ -45,7 +45,7 @@
           <div class="home-page content">
             <div id="categories-container-id" class="category-icons-container cluster">
                 <div class="independent-artists category-icon-container">
-                    <img id="independent-artists-img" class="category-icon currently-selected" src="img/Category Icons/Independent Artists.png" alt="" onclick="changeGenre(this.id)">
+                    <img id="independent-artists-img" class="category-icon currently-selected" src="img/Category Icons/Independent Artists.png" alt="independent-artists" onclick="changeGenre(this.id)">
                     <p class="category-label">Independent Artists</p>
                 </div>
                 <div class="classic-artists category-icon-container">
@@ -95,7 +95,7 @@
                             <img id="album-cover" src="img/Album Art/1.jpeg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Legacy</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">David Bowie</div>
                                 <div class="price-cell">$29.99</div>
                             </div>
@@ -107,8 +107,8 @@
                             <img id="album-cover" src="img/Album Art/2.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Melodies</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
-                                <div class="artist-cell"><p>Lord Echo</p></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
+                                <div class="artist-cell">Lord Echo</div>
                                 <div class="price-cell">$29.99</div>
                             </div>     
                         </div> 
@@ -118,7 +118,7 @@
                             <img id="album-cover" src="img/Album Art/3.jpeg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Inna Jungle</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">Lee Perry</div>
                                 <div class="price-cell">$29.99</div>
                             </div>
@@ -130,8 +130,8 @@
                             <img id="album-cover" src="img/Album Art/5.jpeg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Planet P</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
-                                <div class="artist-cell"><p>Planet P</p></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
+                                <div class="artist-cell">Planet P</div>
                                 <div class="price-cell">$29.99</div>
                             </div>     
                         </div> 
@@ -141,7 +141,7 @@
                             <img id="album-cover" src="img/Album Art/6.jpeg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Island Life</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">Hollie Cook</div>
                                 <div class="price-cell">$29.99</div>
                             </div>
@@ -153,8 +153,8 @@
                             <img id="album-cover" src="img/Album Art/7.jpeg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">The Nomad</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
-                                <div class="artist-cell"><p>Highlander</p></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
+                                <div class="artist-cell">Highlander</div>
                                 <div class="price-cell">$29.99</div>
                             </div>     
                         </div> 
@@ -164,7 +164,7 @@
                             <img id="album-cover" src="img/Album Art/8.jpeg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Ace of Base</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">The Sign</div>
                                 <div class="price-cell">$29.99</div>
                             </div>
@@ -176,8 +176,8 @@
                             <img id="album-cover" src="img/Album Art/9.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Odelay</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
-                                <div class="artist-cell"><p>Beck</p></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
+                                <div class="artist-cell">Beck</div>
                                 <div class="price-cell">$29.99</div>
                             </div>     
                         </div> 
@@ -187,7 +187,7 @@
                             <img id="album-cover" src="img/Album Art/10.jpeg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">What what</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">Me and I</div>
                                 <div class="price-cell">$29.99</div>
                             </div>
@@ -199,8 +199,8 @@
                             <img id="album-cover" src="img/Album Art/11.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Stripes</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
-                                <div class="artist-cell"><p>Humour Me</p></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
+                                <div class="artist-cell">Humour Me</div>
                                 <div class="price-cell">$29.99</div>
                             </div>     
                         </div> 
@@ -210,7 +210,7 @@
                             <img id="album-cover" src="img/Album Art/12.jpeg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Monster Planet</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">Steve Braund</div>
                                 <div class="price-cell">$29.99</div>
                             </div>
@@ -222,8 +222,8 @@
                             <img id="album-cover" src="img/Album Art/4.jpeg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Botanica</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
-                                <div class="artist-cell"><p>Blume</p></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
+                                <div class="artist-cell">Blume</div>
                                 <div class="price-cell">$29.99</div>
                             </div>     
                         </div> 
@@ -246,7 +246,7 @@
                             <img id="album-cover" src="img/Album Art/13.jpeg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">The Top</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">Adam Ant</div>
                                 <div class="price-cell">$29.99</div>
                             </div>
@@ -258,8 +258,8 @@
                             <img id="album-cover" src="img/Album Art/14.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Low</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
-                                <div class="artist-cell"><p>David Bowie</p></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
+                                <div class="artist-cell">David Bowie</div>
                                 <div class="price-cell">$29.99</div>
                             </div>     
                         </div> 
@@ -269,7 +269,7 @@
                             <img id="album-cover" src="img/Album Art/15.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Workout!</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">Jane Fonda</div>
                                 <div class="price-cell">$29.99</div>
                             </div>
@@ -281,8 +281,8 @@
                             <img id="album-cover" src="img/Album Art/16.jpeg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">ELO</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
-                                <div class="artist-cell"><p>Best Of</p></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
+                                <div class="artist-cell">Best Of</div>
                                 <div class="price-cell">$29.99</div>
                             </div>     
                         </div> 
@@ -292,7 +292,7 @@
                             <img id="album-cover" src="img/Album Art/17.jpeg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Wizard Oz</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">MEED</div>
                                 <div class="price-cell">$29.99</div>
                             </div>
@@ -304,8 +304,8 @@
                             <img id="album-cover" src="img/Album Art/18.jpeg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Creepa</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
-                                <div class="artist-cell"><p>The Andes</p></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
+                                <div class="artist-cell">The Andes</div>
                                 <div class="price-cell">$29.99</div>
                             </div>     
                         </div> 
@@ -315,7 +315,7 @@
                             <img id="album-cover" src="img/Album Art/19.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Revolver</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">The Beatles</div>
                                 <div class="price-cell">$29.99</div>
                             </div>
@@ -327,8 +327,8 @@
                             <img id="album-cover" src="img/Album Art/20.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Living</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
-                                <div class="artist-cell"><p>BeeGees</p></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
+                                <div class="artist-cell">BeeGees</div>
                                 <div class="price-cell">$29.99</div>
                             </div>     
                         </div> 
@@ -338,7 +338,7 @@
                             <img id="album-cover" src="img/Album Art/21.jpeg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Rumours</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">Fleetwood Mac</div>
                                 <div class="price-cell">$29.99</div>
                             </div>
@@ -350,8 +350,8 @@
                             <img id="album-cover" src="img/Album Art/22.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Greatest Hits</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
-                                <div class="artist-cell"><p>Fleetwood Mac</p></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
+                                <div class="artist-cell">Fleetwood Mac</div>
                                 <div class="price-cell">$29.99</div>
                             </div>     
                         </div> 
@@ -361,7 +361,7 @@
                             <img id="album-cover" src="img/Album Art/23.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Dreamwave</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">Pink Floyd</div>
                                 <div class="price-cell">$29.99</div>
                             </div>
@@ -373,8 +373,8 @@
                             <img id="album-cover" src="img/Album Art/24.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Dark Side</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
-                                <div class="artist-cell"><p>Pink Floyd</p></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
+                                <div class="artist-cell">Pink Floyd</div>
                                 <div class="price-cell">$29.99</div>
                             </div>     
                         </div> 
@@ -397,7 +397,7 @@
                             <img id="album-cover" src="img/Album Art/25.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Brotherhood</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">New Order</div>
                                 <div class="price-cell">$29.99</div>
                             </div>
@@ -409,8 +409,8 @@
                             <img id="album-cover" src="img/Album Art/26.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Shallow</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
-                                <div class="artist-cell"><p>Shy Girl</p></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
+                                <div class="artist-cell">Shy Girl</div>
                                 <div class="price-cell">$29.99</div>
                             </div>     
                         </div> 
@@ -420,7 +420,7 @@
                             <img id="album-cover" src="img/Album Art/27.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Corruption</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">New Order</div>
                                 <div class="price-cell">$29.99</div>
                             </div>
@@ -432,8 +432,8 @@
                             <img id="album-cover" src="img/Album Art/28.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Hooplah</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
-                                <div class="artist-cell"><p>Gorillaz</p></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
+                                <div class="artist-cell">Gorillaz</div>
                                 <div class="price-cell">$29.99</div>
                             </div>     
                         </div> 
@@ -443,7 +443,7 @@
                             <img id="album-cover" src="img/Album Art/29.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Kraftwerk</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">Autobahn</div>
                                 <div class="price-cell">$29.99</div>
                             </div>
@@ -455,8 +455,8 @@
                             <img id="album-cover" src="img/Album Art/30.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Fire</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
-                                <div class="artist-cell"><p>H C Mason</p></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
+                                <div class="artist-cell">H C Mason</div>
                                 <div class="price-cell">$29.99</div>
                             </div>     
                         </div> 
@@ -466,7 +466,7 @@
                             <img id="album-cover" src="img/Album Art/31.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Ultimathule</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">Tangerine Dream</div>
                                 <div class="price-cell">$29.99</div>
                             </div>
@@ -478,8 +478,8 @@
                             <img id="album-cover" src="img/Album Art/32.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">F Painting</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
-                                <div class="artist-cell"><p>Bafwerk</p></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
+                                <div class="artist-cell">Bafwerk</div>
                                 <div class="price-cell">$29.99</div>
                             </div>     
                         </div> 
@@ -489,7 +489,7 @@
                             <img id="album-cover" src="img/Album Art/33.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Amnesiac</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">Radiohead</div>
                                 <div class="price-cell">$29.99</div>
                             </div>
@@ -501,8 +501,8 @@
                             <img id="album-cover" src="img/Album Art/34.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Boards</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
-                                <div class="artist-cell"><p>Campfire Delight</p></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
+                                <div class="artist-cell">Campfire Delight</div>
                                 <div class="price-cell">$29.99</div>
                             </div>     
                         </div> 
@@ -512,7 +512,7 @@
                             <img id="album-cover" src="img/Album Art/35.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Sandy Hill</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">Sandy Hill</div>
                                 <div class="price-cell">$29.99</div>
                             </div>
@@ -524,8 +524,8 @@
                             <img id="album-cover" src="img/Album Art/36.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Cheetah</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
-                                <div class="artist-cell"><p>Aphex Twin</p></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
+                                <div class="artist-cell">Aphex Twin</div>
                                 <div class="price-cell">$29.99</div>
                             </div>     
                         </div> 
@@ -548,7 +548,7 @@
                             <img id="album-cover" src="img/Album Art/37.jpeg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Back2Black</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">Amy Winehouse</div>
                                 <div class="price-cell">$29.99</div>
                             </div>
@@ -560,8 +560,8 @@
                             <img id="album-cover" src="img/Album Art/38.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Lemonade</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
-                                <div class="artist-cell"><p>Beyoncé</p></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
+                                <div class="artist-cell">Beyoncé</div>
                                 <div class="price-cell">$29.99</div>
                             </div>     
                         </div> 
@@ -571,7 +571,7 @@
                             <img id="album-cover" src="img/Album Art/39.jpeg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Pure Heroine</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">Lorde</div>
                                 <div class="price-cell">$29.99</div>
                             </div>
@@ -583,8 +583,8 @@
                             <img id="album-cover" src="img/Album Art/40.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Visions</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
-                                <div class="artist-cell"><p>Imagine Dragons</p></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
+                                <div class="artist-cell">Imagine Dragons</div>
                                 <div class="price-cell">$29.99</div>
                             </div>     
                         </div> 
@@ -594,7 +594,7 @@
                             <img id="album-cover" src="img/Album Art/41.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Magic</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">Coldplay</div>
                                 <div class="price-cell">$29.99</div>
                             </div>
@@ -606,8 +606,8 @@
                             <img id="album-cover" src="img/Album Art/42.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Starboy</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
-                                <div class="artist-cell"><p>The Weeknd</p></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
+                                <div class="artist-cell">The Weeknd</div>
                                 <div class="price-cell">$29.99</div>
                             </div>     
                         </div> 
@@ -617,7 +617,7 @@
                             <img id="album-cover" src="img/Album Art/43.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">21</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">Adele</div>
                                 <div class="price-cell">$29.99</div>
                             </div>
@@ -629,8 +629,8 @@
                             <img id="album-cover" src="img/Album Art/44.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Hope Downs</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
-                                <div class="artist-cell"><p>RBCF</p></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
+                                <div class="artist-cell">RBCF</div>
                                 <div class="price-cell">$29.99</div>
                             </div>     
                         </div> 
@@ -640,7 +640,7 @@
                             <img id="album-cover" src="img/Album Art/45.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Honeymoon</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">Lana Del Ray</div>
                                 <div class="price-cell">$29.99</div>
                             </div>
@@ -652,8 +652,8 @@
                             <img id="album-cover" src="img/Album Art/46.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">26</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
-                                <div class="artist-cell"><p>Adele</p></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
+                                <div class="artist-cell">Adele</div>
                                 <div class="price-cell">$29.99</div>
                             </div>     
                         </div> 
@@ -663,7 +663,7 @@
                             <img id="album-cover" src="img/Album Art/47.jpeg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Affection</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">Cigarettes After Sex</div>
                                 <div class="price-cell">$29.99</div>
                             </div>
@@ -675,8 +675,8 @@
                             <img id="album-cover" src="img/Album Art/48.jpeg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Up n Down</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
-                                <div class="artist-cell"><p>Ariana Grande</p></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
+                                <div class="artist-cell">Ariana Grande</div>
                                 <div class="price-cell">$29.99</div>
                             </div>     
                         </div> 
@@ -699,8 +699,8 @@
                             <img id="album-cover" src="img/Album Art/48.jpeg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Up n Down</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
-                                <div class="artist-cell"><p>Ariana Grande</p></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
+                                <div class="artist-cell">Ariana Grande</div>
                                 <div class="price-cell">$29.99</div>
                             </div>     
                         </div> 
@@ -710,7 +710,7 @@
                             <img id="album-cover" src="img/Album Art/33.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Amnesiac</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">Radiohead</div>
                                 <div class="price-cell">$29.99</div>
                             </div>
@@ -722,8 +722,8 @@
                             <img id="album-cover" src="img/Album Art/46.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">26</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
-                                <div class="artist-cell"><p>Adele</p></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
+                                <div class="artist-cell">Adele</div>
                                 <div class="price-cell">$29.99</div>
                             </div>     
                         </div> 
@@ -733,8 +733,8 @@
                             <img id="album-cover" src="img/Album Art/11.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Stripes</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
-                                <div class="artist-cell"><p>Humour Me</p></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
+                                <div class="artist-cell">Humour Me</div>
                                 <div class="price-cell">$29.99</div>
                             </div>     
                         </div> 
@@ -744,8 +744,8 @@
                             <img id="album-cover" src="img/Album Art/38.jpg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Lemonade</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
-                                <div class="artist-cell"><p>Beyoncé</p></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
+                                <div class="artist-cell">Beyoncé</div>
                                 <div class="price-cell">$29.99</div>
                             </div>     
                         </div> 
@@ -755,7 +755,7 @@
                             <img id="album-cover" src="img/Album Art/39.jpeg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
                                 <div class="title-cell">Pure Heroine</div>
-                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon"></i></div>
+                                <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">Lorde</div>
                                 <div class="price-cell">$29.99</div>
                             </div>                        
@@ -801,13 +801,15 @@
                 <p id="cart-heading">Shopping Cart</p>
                 <a href="javascript:void(0)" class="closebtn" onclick="closeCart()">&times;</a>
             </div>
-
             <div class="cart-sidebar-body">
-                <a href="#">Item1</a>
-                <a href="#">Item 2</a>
-                <a href="#">Item 3</a>
-                <a href="#">Subtotal</a>
+                <div id="cart-sidebar-constant-container">
+                    <a>Constant</a>
+                </div>
+                <div id="cart-sidebar-body-container">
+    
+                </div>
             </div>
+            
         </div>
 
     

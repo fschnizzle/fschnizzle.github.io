@@ -240,7 +240,70 @@ function closePopup() {
     console.log("closed");
 }
 
+var cart_items = []
+var COST_CONST = 29.99
 
+function add2cart(item_cart_node){
+    // Get details of item
+    var parent = item_cart_node.parentNode.parentNode
+    var title = parent.firstChild.nextSibling
+    var artist = title.nextSibling.nextSibling.nextSibling.nextSibling
+    var img_path = parent.parentNode.firstChild.nextSibling.src
+
+    // push item details [title, artist, img-pathname] to array containing other items
+    cart_items.push([title.innerHTML, artist.innerHTML, img_path])
+    console.log(cart_items)
+
+    // 
+
+    // Update cart bubble count and running total
+    var x = document.getElementsByClassName("fa fa-shopping-cart fa-2x white icon bubble")[0]
+    x.setAttribute("data-count", cart_items.length)
+    document.getElementById("running-total").innerHTML = "$" + cart_items.length*COST_CONST
+
+}
+
+function cart_display(){
+    // Clear Div
+    document.getElementById('cart-sidebar-body-container').innerHTML = "";
+
+
+    for (var item=0; item < cart_items.length; item++){
+    
+
+        // Create new div for each item
+        var cart_item_div = document.createElement("div")
+        document.getElementById('cart-sidebar-body-container').appendChild(cart_item_div)
+
+        // Add Album cover
+        var album_cover = document.createElement("img")
+        album_cover.src = cart_items[item][2]
+        album_cover.className = 'cart-thumb'
+        var current_div = document.getElementById('cart-sidebar-body-container').lastChild
+        current_div.appendChild(album_cover)
+        
+        // Add Title Label
+        var title_label = document.createElement("p")
+        title_label.innerHTML = "1x " + cart_items[item][0]
+        current_div.appendChild(title_label)
+
+        // Add Price Label
+        var price_label = document.createElement("p")
+        price_label.innerHTML = "($29.99)"
+        current_div.appendChild(price_label)
+
+        // Add remove icon
+        var remove_icon = document.createElement("i")
+        remove_icon.className = 'fa fa-minus-circle 2x' 
+        current_div.appendChild(remove_icon)
+        
+    }
+
+
+    // var btn = document.createElement("BUTTON");   // Create a <button> element
+    // btn.innerHTML = "CLICK ME";                   // Insert text
+    // document.body.appendChild(btn);   
+}
 
 
 
