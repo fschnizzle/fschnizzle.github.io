@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="layout.css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-    <script type="text/javascript" src="scripts/collapsing-header.js"></script>
+    <script type="text/javascript" src="scripts/scripts.js"></script>
 
 </head>
 <body>
@@ -42,7 +42,7 @@
             </header>
           </article>
 
-          <div id="home-page-content" class="home-page content">
+          <div id="home-page-content" class="home-page content" >
             <div id="categories-container-id" class="category-icons-container cluster">
                 <div class="independent-artists category-icon-container">
                     <img id="independent-artists-img" class="category-icon currently-selected" src="img/Category Icons/Independent Artists.png" alt="independent-artists" onclick="changeGenre(this.id)">
@@ -764,11 +764,188 @@
                 </div>
             </div>
             
-
-
-     
           </div>
+          <div hidden id="checkout-container" >
+            <div id="checkout-content" >
+                <div class="form-container">
+                    <div class="form-part">
+                    <h2>Billing & Shipping</h2>
+                
+                    <div class="form-inputs">
+                        <div class="sqr-input">
+                        <div class="text-input margin-bottom-zero">
+                            <div class="sqr-input">
+                            <div class="text-input">
+                                <label for="fname">First Name</label>
+                                <input type="text" name="fname" id="fname" >
+                            </div>
+                            <div class="text-input">
+                                <label for="lname">Last Name</label>
+                                <input type="text" name="lnaem" id="lnaem">
+                            </div>
+                            <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        <div class="text-input">
+                            <label for="phone">Mobile (optional))</label>
+                            <input type="text" name="phone" id="phone">
+                        </div>
+                        <div class="clearfix"></div>
+                        </div>
+                
+                        <div class="text-input">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email">
+                        </div>
+                
+                
+                        <div class="text-input">
+                        <label for="address">Address Line</label>
+                        <input type="text" name="address" id="address">
+                        </div>
+                
+                        <div class="cub-input">
+                        <div class="text-input">
+                            <label for="street">Street</label>
+                            <input type="text" name="street" id="street">
+                        </div>
+                        <div class="text-input">
+                            <label for="postalcode">Postal Code</label>
+                            <input type="text" name="postalcode" id="postalcode">
+                        </div>
+                        <div class="text-input">
+                            <label for="city">City</label>
+                            <input type="text" name="city" id="city">
+                        </div>
+                        <div class="clearfix"></div>
+                        </div>
+                
+                
+                        <div class="radio-button">
+                        <label>Gender</label>
+                        <ul>
+                            <li>
+                            <input type="radio" name="gender" /><span>Male</span>
+                            </li>
+                            <li>
+                            <input type="radio" name="gender" /><span>Female</span>
+                            </li>
+                        </ul>
+                        </div>
+                
+                        <div class="text-input">
+                        <label for="country">Country</label>
+                        <select name="country" id="country">
+                            <option value="0" selected>--- Choose your country ---</option>
+                            <option value="1">AUS</option>
+                            <option value="2">US</option>
+                            <option value="3">UK</option>
+                            <option value="4">Other (Shipping Currently Unavailable)</option>
+                        </select>
+                        </div>
+                
+                        <div class="sqr-radio-input">
+                        
+                        <div class="clearfix"></div>
+                        </div>
+                
+                
+                        <div class="text-input">
+                        <label for="message">Delivery Message (optional)</label>
+                        <textarea name="message" id="message"></textarea>
+                        </div>
+                
+                
+                        <div class="check-boxes">
+                        <ul>
+                            <li>
+                            <input type="checkbox" name="terms" /> <span>I accept terms and conditions</span>
+                            </li>
+                        </ul>
+                        </div>
+                
+                    </div>
+                
+                    </div>
+                </div>
+                <div id="checkout-right">
+                    <h2 id="details-heading">Your Order</h2>
+                    <div id="order-description">
+                        <!-- Apply flex / space between for all children -->
+                        <div>
+                            <h3>Product</h3>
+                            <h3>Subtotal</h3>
+                        </div>
+                        <hr>
+                        <div id="item-cost-desc">
+                            <!-- Display (1x Name) and $21.99 for each item-->
+                        </div>
+                        <hr>
+                        <div>
+                            <h3>Item total</h3>
+                            <p id="item-total"></p>
+                        </div>
+                        <hr>
+                        <div>
+                            <h3>Shipping</h3>
+                            <h3>$10.50</h3>
+                        </div>
+                        <hr>
+                        <div>
+                            <h3>Total</h3>
+                            <h3 id="cost-total"></h3>
+                        </div>
+                    </div>
+                    <div id="payment-radio">
+                        <!-- Paypal -->
+                        <div>
+                            <input type="radio" name="payment" checked>
+                            <label for="details">Paypal</label>
+                            <div class="text-input">
+                                <input type="text" name="lnaem" id="paypal-details" style="-webkit-text-security: disc;">
+                            </div>
 
+                        </div>
+                        <!-- Afterpay -->
+                        <div>
+                            <input type="radio" name="payment" onclick="underMaintenance()">
+                            <label for="details">Afterpay</label>
+                        </div>
+                        <!-- Secure Payment -->
+                        <div>
+                            <input type="radio" name="payment" onclick="underMaintenance()">
+                            <label for="details">Secure Payment</label>
+                        </div>
+                        
+                    </div>
+                    <button class="btn" id="place-order-btn" onclick="underMaintenance()">Place Order</button>
+                </div>
+            </div> 
+          </div>
+          <div id="footer-content">
+            <h1>Newsletter</h1>
+            <div class="footer-newsletter-container cluster">
+                <input class="footer-input" type="text" placeholder="email address">
+                <input type="submit" value="Submit" onclick="underMaintenance()">
+            </div>
+            
+            <hr class="footer-hr">
+            <div id="footer-socials-symbols">
+                <i class="fa fa-facebook-square white"></i>
+                <i class="fa fa-instagram white"></i>
+                <i class="fa fa-twitter-square white"></i>
+            </div>
+            <hr class="footer-hr">
+
+            <p>© 2021 Profile Music Vinyl Specialists</p>
+
+            <div id="footer-payment-symbols">
+                <i class="fa fa-cc-visa white"></i>
+                <i class="fa fa-cc-paypal white"></i>
+                <i class="fa fa-cc-mastercard white"></i>
+                <i class="fa fa-cc-amex white"></i>
+            </div>
+        </div>
     </div>
 
 
@@ -782,8 +959,8 @@
             <p id="cart-heading">Menu</p>
         </div>
         <div class="sidebar-body">
+            <a href="#" onclick="reset()">Catalogue</a>
             <a href="#" onclick="underMaintenance()">About</a>
-            <a href="#" onclick="underMaintenance()">Services</a>
             <a href="#" onclick="underMaintenance()">Contact</a>
         </div>
         </div>
@@ -808,8 +985,9 @@
                 <p id="empty-cart" style="transform: translateY(-30px);">Shopping cart is empty</p>
                 <div id="cart-sidebar-constant-container">
                     <pre id="subtotal">Subtotal:</pre>
-                    <button id="btn" onclick="goToCheckout(); closeCart()">Checkout</button>
+                    <button class="btn" id="btn" onclick="goToCheckout(); closeCart(); checkoutItems()">Checkout</button>
                 </div>
+                
             </div>
             
         </div>
@@ -822,10 +1000,10 @@
         <div class="popup-content">
             <img id="popup-img" alt="">
             <div class="give-margin">
-                <p id="popup-artist">Linkin Park</p>
-                <p id="popup-title">Title: In the End</p>
+                <p id="popup-artist"></p>
+                <p id="popup-title"></p>
                 <br>
-                <p >Comments: "Loved it 10/10 whooooo!! What happened ot amsjd sjjsj</p>
+                <p >Comments: "Loved it 10/10 whooooo!! </p>
             </div>
             
         </div>

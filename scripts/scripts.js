@@ -333,6 +333,39 @@ function goToCheckout(){
     console.log("agagah")
 }
 
+function checkoutItems(){
+    $('#checkout-container').show()
+    for (var item=0; item < cart_items.length; item++){
+
+        // Create new div for each item
+        var cart_item_div = document.createElement("div")
+        document.getElementById('item-cost-desc').appendChild(cart_item_div)
+
+        
+        // Add Title Label
+        var title_label = document.createElement("p")
+        title_label.innerHTML = "1x " + cart_items[item][0]
+        cart_item_div.appendChild(title_label)
+
+        // Add Price Label
+        var price_label = document.createElement("p")
+        price_label.innerHTML = "$29.99"
+        cart_item_div.appendChild(price_label)
+
+        
+
+    }
+    //Update item total
+    document.getElementById("item-total").innerHTML = "$" + 29.99*parseInt(cart_items.length)
+    document.getElementById("cost-total").innerHTML = "$" + (29.99*parseInt(cart_items.length) + 10.50).toFixed(2)
+
+}
+
+function reset(){
+    $('#checkout-container').hide()
+    $('#home-page-content').show()
+}
+
 
 
 // var showElementsWhenWidth = function(){
