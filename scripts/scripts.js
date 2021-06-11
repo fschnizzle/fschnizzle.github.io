@@ -317,7 +317,8 @@ function cart_display(){
         var solid_line = document.createElement("hr")
         document.getElementById('cart-sidebar-body-container').appendChild(solid_line)
     }
-
+    document.getElementById('subtotal').innerHTML = "Subtotal: $" + 29.99*cart_items.length
+    
 
     // var btn = document.createElement("BUTTON");   // Create a <button> element
     // btn.innerHTML = "CLICK ME";                   // Insert text

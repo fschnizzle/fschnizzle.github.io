@@ -959,7 +959,7 @@ body{
   /* Checkout Right */
 
   #checkout-right{
-    background-color: #F8F8F8;
+    background-color: #f0f0f0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
