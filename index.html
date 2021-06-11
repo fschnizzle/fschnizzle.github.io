@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="layout.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="scripts/scripts.js"></script>
 
@@ -163,7 +162,7 @@
                         <div class="grid-item-content">
                             <img id="album-cover" src="img/Album Art/8.jpeg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
-                                <div class="title-cell">Ace of Base</div>
+                                <div class="title-cell">Ace o'Base</div>
                                 <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">The Sign</div>
                                 <div class="price-cell">$29.99</div>
@@ -570,7 +569,7 @@
                         <div class="grid-item-content">
                             <img id="album-cover" src="img/Album Art/39.jpeg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
-                                <div class="title-cell">Pure Heroine</div>
+                                <div class="title-cell">Heroine</div>
                                 <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">Lorde</div>
                                 <div class="price-cell">$29.99</div>
@@ -754,7 +753,7 @@
                         <div class="grid-item-content">
                             <img id="album-cover" src="img/Album Art/39.jpeg" alt="" class="album-cover-thumb" onclick="openPopup(this)">
                             <div class="item-description-grid">
-                                <div class="title-cell">Pure Heroine</div>
+                                <div class="title-cell">Heroine</div>
                                 <div class="add-to-cart-cell"><i id="add-to-cart-catalogue" class="fa fa-cart-plus fa-2x icon" onclick="add2cart(this)"></i></div>
                                 <div class="artist-cell">Lorde</div>
                                 <div class="price-cell">$29.99</div>
@@ -883,17 +882,17 @@
                         <hr>
                         <div>
                             <h3>Item total</h3>
-                            <p id="item-total"></p>
+                            <p class="price-font" id="item-total"></p>
                         </div>
                         <hr>
                         <div>
                             <h3>Shipping</h3>
-                            <h3>$10.50</h3>
+                            <p class="price-font">$10.50</p>
                         </div>
                         <hr>
                         <div>
                             <h3>Total</h3>
-                            <h3 id="cost-total"></h3>
+                            <p class="price-font" id="cost-total"></p>
                         </div>
                     </div>
                     <div id="payment-radio">
@@ -923,7 +922,7 @@
             </div> 
           </div>
           <div id="footer-content">
-            <h1>Newsletter</h1>
+            <h1 class="white">Newsletter</h1>
             <div class="footer-newsletter-container cluster">
                 <input class="footer-input" type="text" placeholder="email address">
                 <input type="submit" value="Submit" onclick="underMaintenance()">
@@ -936,8 +935,8 @@
                 <i class="fa fa-twitter-square white"></i>
             </div>
             <hr class="footer-hr">
-
-            <p>© 2021 Profile Music Vinyl Specialists</p>
+            <br>
+            <p class="white">© 2021 Profile Music Vinyl Specialists</p>
 
             <div id="footer-payment-symbols">
                 <i class="fa fa-cc-visa white"></i>

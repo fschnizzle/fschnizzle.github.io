@@ -1,3 +1,5 @@
+// Collapsible header code
+
 $(window).scroll(function() {
     if ($(this).scrollTop() > 1){  
         // Changes
@@ -12,10 +14,7 @@ $(window).scroll(function() {
         $('.fa-bars').hide();
 
         // Content changes
-        $('.content').addClass("header-fixed");
-
- 
-        
+        $('.content').addClass("header-fixed");     
         
     }
     else{
@@ -35,10 +34,6 @@ $(window).scroll(function() {
 
     }
 });
-
-
-
-// Remove logo main, replace with search bar
 
 
 // Sidebar JS
@@ -213,11 +208,7 @@ function changeGenre(clicked_id) {
         // Show selected Genre catalogue
         $('.pop-catalogue').show();
         
-    }
-
-
-    
-    
+    } 
 }
 
 
@@ -318,11 +309,6 @@ function cart_display(){
         document.getElementById('cart-sidebar-body-container').appendChild(solid_line)
     }
     document.getElementById('subtotal').innerHTML = "Subtotal: $" + 29.99*cart_items.length
-    
-
-    // var btn = document.createElement("BUTTON");   // Create a <button> element
-    // btn.innerHTML = "CLICK ME";                   // Insert text
-    // document.body.appendChild(btn);   
 }
 
 function underMaintenance(){
@@ -351,9 +337,7 @@ function checkoutItems(){
         // Add Price Label
         var price_label = document.createElement("p")
         price_label.innerHTML = "$29.99"
-        cart_item_div.appendChild(price_label)
-
-        
+        cart_item_div.appendChild(price_label)      
 
     }
     //Update item total
@@ -366,23 +350,3 @@ function reset(){
     $('#checkout-container').hide()
     $('#home-page-content').show()
 }
-
-
-
-// var showElementsWhenWidth = function(){
-//     if ( $(window).width() < 1379 ) {
-//         $('.independent-artists').show();
-//         $('.classic-artists').show();
-//         $('.dj-and-electronica').show();
-//         $('.pop-music').show();
-//     }
-// }
-
-
-
-
-// Categories JS
-// If "categories-container-id".width < 1080px
-// if (document.getElementById("categories-container-id").getBoundingClientRect().width < 1080){
-//     console.log("YEAHHEYHDHDJDJ");
-// }
